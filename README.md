@@ -71,6 +71,10 @@ In this phase, we examined the dataset for missing values and inconsistencies. T
 
 - Checked for null values and confirmed data integrity.
 - Ensured correct data types and formats for analysis.
+- Imputation Strategy: For missing values in economic data (CPI and Unemployment), the means were calculated and used to replace missing values.
+      - Mean CPI: 202.21
+      - Mean Unemployment: 6.92
+Missing values were replaced using these averages.
 
 ### 2. Feature Engineering
 
@@ -95,35 +99,58 @@ The EDA phase involved answering key business questions:
 #### Economic Conditions
 - **CPI and Unemployment Impact**: Grouped CPI and Unemployment into ranges and observed how these economic factors influenced total and average weekly sales.
 
-### 4. Advanced Analysis (Predictive Modeling)
-
-Although MySQL does not directly support advanced predictive models, we documented potential factors for building a predictive model for future sales:
-- Key features: **CPI**, **Unemployment**, **Holiday Flag**, **Markdowns**, and **Store Size**.
 
 ## Business Questions Addressed
 
-### Product Analysis
-1. **Which departments have the highest sales in each store?**
-   - Identified top-selling departments by summing total weekly sales for each store.
-   
-2. **Are there departments that consistently perform poorly in sales?**
-   - Analyzed departments with below-average sales performance across different stores.
+How many distinct cities are present in the dataset?
+In which city is each branch situated?
+How many distinct product lines are there in the dataset?
+What is the most common payment method?
+What is the most selling product line?
+What is the total revenue by month?
+Which month recorded the highest Cost of Goods Sold (COGS)?
+Which product line generated the highest revenue?
+Which city has the highest revenue?
+Which product line incurred the highest VAT?
+Retrieve each product line and classify as 'Good' or 'Bad' based on sales above average.
+Which branch sold more products than the average?
+What is the most common product line by gender?
+What is the average rating of each product line?
+Number of sales made at each time of the day per weekday.
+Identify the customer type that generates the highest revenue.
+Which city has the largest tax percent/VAT (Value Added Tax)?
+Which customer type pays the most VAT?
+How many unique customer types does the data have?
+How many unique payment methods does the data have?
+Which is the most common customer type?
+Which customer type buys the most?
+What is the gender distribution among customers?
+What is the gender distribution per branch?
+Which time of the day do customers give the most ratings?
+Which time of the day do customers give the most ratings per branch?
+Which day of the week has the best average ratings?
+Which day of the week has the best average ratings per branch?
+What are the trends in weekly sales over time?
+How do weekly sales differ by store and department?
+Which department in each store has the highest sales?
+What are the total sales during holidays compared to non-holidays?
+What is the average weekly sales for each store?
+Which store has the highest total sales across all departments?
+What is the total sales for each department across all stores?
+Which department has the highest average weekly sales across all stores?
+How does the average weekly sales vary by store type?
+Are there specific holidays that result in significantly higher sales?
+What is the average temperature on holidays versus non-holidays affecting sales?
+What is the impact of Fuel Price on Weekly Sales?
+What is the unemployment rate across different store types?
+Are there departments that consistently perform poorly in sales?
+How does the size of the store relate to its average weekly sales?
+Are there trends in sales related to specific store types over time?
+How does temperature affect weekly sales?
+Is there a specific temperature range where sales peak?
+Do economic conditions (CPI and Unemployment) have a noticeable impact on sales trends?
 
-### Sales Analysis
-1. **How do holidays affect sales?**
-   - Compared sales during holiday and non-holiday periods to determine the impact of holidays.
-   
-2. **How do markdowns affect weekly sales?**
-   - Investigated the correlation between markdowns and weekly sales.
-   
-3. **Does store size correlate with higher sales?**
-   - Analyzed the relationship between store size and average weekly sales.
-
-### Economic Impact
-1. **Do economic conditions (CPI and Unemployment) have a noticeable impact on sales trends?**
-   - Grouped CPI and Unemployment into ranges to understand their effect on weekly sales.
-
-## Results
+## Key Results
 
 - **Department Sales**: Identified the top and bottom-performing departments across all stores.
 - **Holiday vs. Non-Holiday Sales**: Sales were significantly higher during holiday weeks.
